@@ -1,0 +1,12 @@
+const mongoose=require('mongoose');
+
+const UserSchema=new mongoose.Schema({
+    fullname:String,
+    email:String,
+    password:String,
+    // isAdmin:Boolean,
+
+})
+
+const UserModel=mongoose.model("User",UserSchema);
+module.exports=UserModel
