@@ -25,11 +25,10 @@ app.get("/getAllUsers",async (req,res)=>{
     const response=await UserModel.find();
     console.log(response);
     if(response.length==0){
-        return res.json({"message":"Data is empty"});
-        return res.status(200);
+        return res.status(200).json({"message":"Data is empty"});
     }
     else{
-    return res.json("Response--->",response);
+    return res.status(200).json({"response": response});
     }
 })
 
